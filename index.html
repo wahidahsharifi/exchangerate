@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Currency Conversion</title>
+      <link rel="stylesheet" href="style.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css" />
+   </head>
+   <body>
+      <main id="interface">
+         <section id="top">
+            <h1>Accurate Currency Conversions for Over 160 Countries</h1>
+         </section>
+         <section id="conversion">
+            <div id="unitSelect">
+               <label for="istme">
+                  <span>Amount</span>
+                  <div>
+                     <span class="sign">$</span>
+                     <input type="text" id="istme" value="1.00" />
+                  </div>
+                  <span id="amoutMessage">Enter a valid amount</span>
+               </label>
+               <div class="unit" id="from">
+                  <span>From</span>
+                  <div>
+                     <span class="fi fi-af"></span>
+                     <p>AFN</p>
+                     Afghan Afghani
+                  </div>
+                  <img src="img/arrow.svg" alt="" />
+               </div>
+               <div class="unit" id="to">
+                  <span>To</span>
+                  <div>
+                     <span class="fi fi-us"></span>
+                     <p>USD</p>
+                     United States Dollar
+                  </div>
+                  <img src="img/arrow.svg" alt="" />
+               </div>
+            </div>
+            <button type="button">Convert</button>
+            <div id="result"></div>
+         </section>
+         <ul id="menu">
+            <input type="text" placeholder="Search" />
+            <li id="AED">
+               <span class="fi fi-ae"></span> United Arab Emirates Dirham
+            </li>
+            <li id="AFN"><span class="fi fi-af"></span> Afghan Afghani</li>
+            <li id="ALL"><span class="fi fi-al"></span> Albanian Lek</li>
+            <li id="AMD"><span class="fi fi-am"></span> Armenian Dram</li>
+            <li id="ANG">
+               <span class="fi fi-nl"></span> Netherlands Antillean Guilder
+            </li>
+            <li id="AOA"><span class="fi fi-ao"></span> Angolan Kwanza</li>
+            <li id="ARS"><span class="fi fi-ar"></span> Argentine Peso</li>
+            <li id="AUD"><span class="fi fi-au"></span> Australian Dollar</li>
+            <li id="AWG"><span class="fi fi-aw"></span> Aruban Florin</li>
+            <li id="AZN"><span class="fi fi-az"></span> Azerbaijani Manat</li>
+            <li id="BAM">
+               <span class="fi fi-ba"></span> Bosnia and Herzegovina Convertible
+               Mark
+            </li>
+            <li id="BBD"><span class="fi fi-bb"></span> Barbadian Dollar</li>
+            <li id="BDT"><span class="fi fi-bd"></span> Bangladeshi Taka</li>
+            <li id="BGN"><span class="fi fi-bg"></span> Bulgarian Lev</li>
+            <li id="BHD"><span class="fi fi-bh"></span> Bahraini Dinar</li>
+            <li id="BIF"><span class="fi fi-bi"></span> Burundian Franc</li>
+            <li id="BMD"><span class="fi fi-bm"></span> Bermudian Dollar</li>
+            <li id="BND"><span class="fi fi-bn"></span> Brunei Dollar</li>
+            <li id="BOB"><span class="fi fi-bo"></span> Bolivian Boliviano</li>
+            <li id="BRL"><span class="fi fi-br"></span> Brazilian Real</li>
+            <li id="BSD"><span class="fi fi-bs"></span> Bahamian Dollar</li>
+            <li id="BTN"><span class="fi fi-bt"></span> Bhutanese Ngultrum</li>
+            <li id="BWP"><span class="fi fi-bw"></span> Botswana Pula</li>
+            <li id="BYN"><span class="fi fi-by"></span> Belarusian Ruble</li>
+            <li id="BZD"><span class="fi fi-bz"></span> Belize Dollar</li>
+            <li id="CAD"><span class="fi fi-ca"></span> Canadian Dollar</li>
+            <li id="CDF"><span class="fi fi-cd"></span> Congolese Franc</li>
+            <li id="CHF"><span class="fi fi-ch"></span> Swiss Franc</li>
+            <li id="CLP"><span class="fi fi-cl"></span> Chilean Peso</li>
+            <li id="CNY"><span class="fi fi-cn"></span> Chinese Yuan</li>
+            <li id="COP"><span class="fi fi-co"></span> Colombian Peso</li>
+            <li id="CRC"><span class="fi fi-cr"></span> Costa Rican Colón</li>
+            <li id="CUP"><span class="fi fi-cu"></span> Cuban Peso</li>
+            <li id="CVE"><span class="fi fi-cv"></span> Cape Verdean Escudo</li>
+            <li id="CZK"><span class="fi fi-cz"></span> Czech Koruna</li>
+            <li id="DJF"><span class="fi fi-dj"></span> Djiboutian Franc</li>
+            <li id="DKK"><span class="fi fi-dk"></span> Danish Krone</li>
+            <li id="DOP"><span class="fi fi-do"></span> Dominican Peso</li>
+            <li id="DZD"><span class="fi fi-dz"></span> Algerian Dinar</li>
+            <li id="EGP"><span class="fi fi-eg"></span> Egyptian Pound</li>
+            <li id="ERN"><span class="fi fi-er"></span> Eritrean Nakfa</li>
+            <li id="ETB"><span class="fi fi-et"></span> Ethiopian Birr</li>
+            <li id="EUR"><span class="fi fi-eu"></span> Euro</li>
+            <li id="FJD"><span class="fi fi-fj"></span> Fijian Dollar</li>
+            <li id="FKP">
+               <span class="fi fi-fk"></span> Falkland Islands Pound
+            </li>
+            <li id="FOK"><span class="fi fi-fo"></span> Faroese Króna</li>
+            <li id="GBP">
+               <span class="fi fi-gb"></span> British Pound Sterling
+            </li>
+            <li id="GEL"><span class="fi fi-ge"></span> Georgian Lari</li>
+            <li id="GGP"><span class="fi fi-gg"></span> Guernsey Pound</li>
+            <li id="GHS"><span class="fi fi-gh"></span> Ghanaian Cedi</li>
+            <li id="GIP"><span class="fi fi-gb"></span> Gibraltar Pound</li>
+            <li id="GMD"><span class="fi fi-gm"></span> Gambian Dalasi</li>
+            <li id="GNF"><span class="fi fi-gn"></span> Guinean Franc</li>
+            <li id="GTQ"><span class="fi fi-gt"></span> Guatemalan Quetzal</li>
+            <li id="GYD"><span class="fi fi-gy"></span> Guyanese Dollar</li>
+            <li id="HKD"><span class="fi fi-hk"></span> Hong Kong Dollar</li>
+            <li id="HNL"><span class="fi fi-hn"></span> Honduran Lempira</li>
+            <li id="HRK"><span class="fi fi-hr"></span> Croatian Kuna</li>
+            <li id="HTG"><span class="fi fi-ht"></span> Haitian Gourde</li>
+            <li id="HUF"><span class="fi fi-hu"></span> Hungarian Forint</li>
+            <li id="IDR"><span class="fi fi-id"></span> Indonesian Rupiah</li>
+            <li id="ILS"><span class="fi fi-il"></span> Israeli New Shekel</li>
+            <li id="IMP"><span class="fi fi-im"></span> Isle of Man Pound</li>
+            <li id="INR"><span class="fi fi-in"></span> Indian Rupee</li>
+            <li id="IQD"><span class="fi fi-iq"></span> Iraqi Dinar</li>
+            <li id="IRR"><span class="fi fi-ir"></span> Iranian Rial</li>
+            <li id="ISK"><span class="fi fi-is"></span> Icelandic Króna</li>
+            <li id="JEP"><span class="fi fi-je"></span> Jersey Pound</li>
+            <li id="JMD"><span class="fi fi-jm"></span> Jamaican Dollar</li>
+            <li id="JOD"><span class="fi fi-jo"></span> Jordanian Dinar</li>
+            <li id="JPY"><span class="fi fi-jp"></span> Japanese Yen</li>
+            <li id="KES"><span class="fi fi-ke"></span> Kenyan Shilling</li>
+            <li id="KGS"><span class="fi fi-kg"></span> Kyrgyzstani Som</li>
+            <li id="KHR"><span class="fi fi-kh"></span> Cambodian Riel</li>
+            <li id="KID"><span class="fi fi-ki"></span> Kiribati Dollar</li>
+            <li id="KMF"><span class="fi fi-km"></span> Comorian Franc</li>
+            <li id="KRW"><span class="fi fi-kr"></span> South Korean Won</li>
+            <li id="KWD"><span class="fi fi-kw"></span> Kuwaiti Dinar</li>
+            <li id="KYD">
+               <span class="fi fi-ky"></span> Cayman Islands Dollar
+            </li>
+            <li id="KZT"><span class="fi fi-kz"></span> Kazakhstani Tenge</li>
+            <li id="LAK"><span class="fi fi-la"></span> Lao Kip</li>
+            <li id="LBP"><span class="fi fi-lb"></span> Lebanese Pound</li>
+            <li id="LKR"><span class="fi fi-lk"></span> Sri Lankan Rupee</li>
+            <li id="LRD"><span class="fi fi-lr"></span> Liberian Dollar</li>
+            <li id="LSL"><span class="fi fi-ls"></span> Lesotho Loti</li>
+            <li id="LYD"><span class="fi fi-ly"></span> Libyan Dinar</li>
+            <li id="MAD"><span class="fi fi-ma"></span> Moroccan Dirham</li>
+            <li id="MDL"><span class="fi fi-md"></span> Moldovan Leu</li>
+            <li id="MGA"><span class="fi fi-mg"></span> Malagasy Ariary</li>
+            <li id="MKD"><span class="fi fi-mk"></span> Macedonian Denar</li>
+            <li id="MMK"><span class="fi fi-mm"></span> Myanmar Kyat</li>
+            <li id="MNT"><span class="fi fi-mn"></span> Mongolian Tögrög</li>
+            <li id="MOP"><span class="fi fi-mo"></span> Macanese Pataca</li>
+            <li id="MRU"><span class="fi fi-mr"></span> Mauritanian Ouguiya</li>
+            <li id="MUR"><span class="fi fi-mu"></span> Mauritian Rupee</li>
+            <li id="MVR"><span class="fi fi-mv"></span> Maldivian Rufiyaa</li>
+            <li id="MWK"><span class="fi fi-mw"></span> Malawian Kwacha</li>
+            <li id="MXN"><span class="fi fi-mx"></span> Mexican Peso</li>
+            <li id="MYR"><span class="fi fi-my"></span> Malaysian Ringgit</li>
+            <li id="MZN"><span class="fi fi-mz"></span> Mozambican Metical</li>
+            <li id="NAD"><span class="fi fi-na"></span> Namibian Dollar</li>
+            <li id="NGN"><span class="fi fi-ng"></span> Nigerian Naira</li>
+            <li id="NIO"><span class="fi fi-ni"></span> Nicaraguan Córdoba</li>
+            <li id="NOK"><span class="fi fi-no"></span> Norwegian Krone</li>
+            <li id="NPR"><span class="fi fi-np"></span> Nepalese Rupee</li>
+            <li id="NZD"><span class="fi fi-nz"></span> New Zealand Dollar</li>
+            <li id="OMR"><span class="fi fi-om"></span> Omani Rial</li>
+            <li id="PAB"><span class="fi fi-pa"></span> Panamanian Balboa</li>
+            <li id="PEN"><span class="fi fi-pe"></span> Peruvian Sol</li>
+            <li id="PGK">
+               <span class="fi fi-pg"></span> Papua New Guinean Kina
+            </li>
+            <li id="PHP"><span class="fi fi-ph"></span> Philippine Peso</li>
+            <li id="PKR"><span class="fi fi-pk"></span> Pakistani Rupee</li>
+            <li id="PLN"><span class="fi fi-pl"></span> Polish Zloty</li>
+            <li id="PYG"><span class="fi fi-py"></span> Paraguayan Guaraní</li>
+            <li id="QAR"><span class="fi fi-qa"></span> Qatari Rial</li>
+            <li id="RON"><span class="fi fi-ro"></span> Romanian Leu</li>
+            <li id="RSD"><span class="fi fi-rs"></span> Serbian Dinar</li>
+            <li id="RUB"><span class="fi fi-ru"></span> Russian Ruble</li>
+            <li id="RWF"><span class="fi fi-rw"></span> Rwandan Franc</li>
+            <li id="SAR"><span class="fi fi-sa"></span> Saudi Riyal</li>
+            <li id="SBD">
+               <span class="fi fi-sb"></span> Solomon Islands Dollar
+            </li>
+            <li id="SCR"><span class="fi fi-sc"></span> Seychellois Rupee</li>
+            <li id="SDG"><span class="fi fi-sd"></span> Sudanese Pound</li>
+            <li id="SEK"><span class="fi fi-se"></span> Swedish Krona</li>
+            <li id="SGD"><span class="fi fi-sg"></span> Singapore Dollar</li>
+            <li id="SHP"><span class="fi fi-sh"></span> Saint Helena Pound</li>
+            <li id="SLE">
+               <span class="fi fi-sl"></span> Sierra Leonean Leone
+            </li>
+            <li id="SLL">
+               <span class="fi fi-sl"></span> Sierra Leonean Leone
+            </li>
+            <li id="SYP"><span class="fi fi-sy"></span> Syrian Pound</li>
+            <li id="SOS"><span class="fi fi-so"></span> Somali Shilling</li>
+            <li id="SRD"><span class="fi fi-sr"></span> Surinamese Dollar</li>
+            <li id="SSP">
+               <span class="fi fi-ss"></span> South Sudanese Pound
+            </li>
+            <li id="STN">
+               <span class="fi fi-st"></span> São Tomé and Príncipe Dobra
+            </li>
+            <li id="SZL"><span class="fi fi-sz"></span> Swazi Lilangeni</li>
+            <li id="THB"><span class="fi fi-th"></span> Thai Baht</li>
+            <li id="TJS"><span class="fi fi-tj"></span> Tajikistani Somoni</li>
+            <li id="TMT"><span class="fi fi-tm"></span> Turkmenistani Manat</li>
+            <li id="TND"><span class="fi fi-tn"></span> Tunisian Dinar</li>
+            <li id="TOP"><span class="fi fi-to"></span> Tongan Paʻanga</li>
+            <li id="TRY"><span class="fi fi-tr"></span> Turkish Lira</li>
+            <li id="TTD">
+               <span class="fi fi-tt"></span> Trinidad and Tobago Dollar
+            </li>
+            <li id="TVD"><span class="fi fi-au"></span> Tuvaluan Dollar</li>
+            <li id="TWD"><span class="fi fi-tw"></span> New Taiwan Dollar</li>
+            <li id="TZS"><span class="fi fi-tz"></span> Tanzanian Shilling</li>
+            <li id="UAH"><span class="fi fi-ua"></span> Ukrainian Hryvnia</li>
+            <li id="UGX"><span class="fi fi-ug"></span> Ugandan Shilling</li>
+            <li id="USD">
+               <span class="fi fi-us"></span> United States Dollar
+            </li>
+            <li id="UYU"><span class="fi fi-uy"></span> Uruguayan Peso</li>
+            <li id="UZS"><span class="fi fi-uz"></span> Uzbekistani Som</li>
+            <li id="VES"><span class="fi fi-ve"></span> Venezuelan Bolívar</li>
+            <li id="VND"><span class="fi fi-vn"></span> Vietnamese Dong</li>
+            <li id="VUV"><span class="fi fi-vu"></span> Vanuatu Vatu</li>
+            <li id="WST"><span class="fi fi-ws"></span> Samoan Tala</li>
+            <li id="XAF">
+               <span class="fi fi-cf"></span> Central African CFA Franc
+            </li>
+            <li id="XCD">
+               <span class="fi fi-ec"></span> East Caribbean Dollar
+            </li>
+            <li id="XDR">
+               <span class="fi fi-sd"></span> Special Drawing Rights
+            </li>
+            <li id="XOF">
+               <span class="fi fi-fo"></span> West African CFA Franc
+            </li>
+            <li id="XPF"><span class="fi fi-pf"></span> CFP Franc</li>
+            <li id="YER"><span class="fi fi-ye"></span> Yemeni Rial</li>
+            <li id="ZAR"><span class="fi fi-za"></span> South African Rand</li>
+            <li id="ZMW"><span class="fi fi-zm"></span> Zambian Kwacha</li>
+            <li id="ZWL"><span class="fi fi-zw"></span> Zimbabwean Dollar</li>
+            <span>No results found.</span>
+         </ul>
+      </main>
+      <footer>
+         <p>WS Currency conversion, crafted by <a href="https://wahidsharifi.vercel.app">Wahid Sharifi</a>, is powered by <a href="https://v6.exchangerate-api.com/">ExchangeRate-API</a> under free plan. enjoy conversion by daily refreshed exchange rates for over 160 currencies.</p>
+      </footer>
+      <script src="main.js"></script>
+   </body>
+</html>
